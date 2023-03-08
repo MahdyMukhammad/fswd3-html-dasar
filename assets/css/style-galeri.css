@@ -1,0 +1,80 @@
+   :root{
+	--primary-color: pink;
+	--secondary-color: rgba(0, 195, 255, 0.322);
+	--third-color: rgb(255, 226, 226);
+   } 
+	body {
+		margin: 0;
+		padding: 0;
+        font-family: sans-serif;
+	}
+	h1 {
+		text-align: center;
+		margin-top: 50px;
+		color: #333;
+	}
+
+	.row{
+		display: inline-block;
+		width: 100%;
+	}
+
+	.container {
+		margin: auto;
+		box-sizing: border-box;
+		width: 1200px;
+		padding-left: 20px;
+		padding-right: 20px;
+		background-color: var(--primary-color);
+	}
+
+	.card {
+		background-color: var(--secondary-color);
+		border-radius: 15px;
+		border: rgb(46, 84, 190) solid 3px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		width: calc((100% - 35px) / 4);
+		display: inline-block;
+		vertical-align: top;
+		height: 340px;
+	}
+
+	.card img {
+		width: 100%;
+		height: 160px;
+		object-fit: cover;
+	}
+
+	.card-content {
+		padding: 20px;
+	}
+
+	.card-title {
+		margin: 0;
+		font-size: 20px;
+		font-weight: 600;
+		color:rgba(11, 28, 100, 0.801);
+		text-align: center;
+	}
+
+	.card-description {
+		margin: 10px 0 0;
+		font-size: 16px;
+		line-height: 1.4;
+		color:rgba(48, 53, 133, 0.76);
+	}
+
+	.row2 .card{
+		background-color: var(--third-color);
+		border: rgba(165, 42, 42, 0.548) solid 3px;
+		min-height: 200px;
+	}
+
+	.row2 .card-title{
+		color: rgba(165, 42, 42, 0.651);
+	}
+
+	.row2 .card-description{
+		color: rgba(165, 42, 42, 0.37);
+	}
