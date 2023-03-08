@@ -34,7 +34,7 @@
 		border: rgb(46, 84, 190) solid 3px;
 		margin-bottom: 20px;
 		overflow: hidden;
-		width: calc((100% - 35px) / 4);
+		width: calc((100% - 38px) / 4);
 		display: inline-block;
 		vertical-align: top;
 		height: 340px;
