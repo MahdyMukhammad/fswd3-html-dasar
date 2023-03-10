@@ -1,0 +1,168 @@
+:root{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+section{
+    background-color: var(--secondary-color);
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: 20px;
+}
+
+.flex-area1{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.flex-item1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.ke1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+.ke2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-color: rgb(255, 200, 47); 
+}
+
+.flex-item2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.ke3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    background-color: rgb(47, 255, 141);     
+}
+
+.flex-item3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75%;
+    gap: 10px;
+}
+
+.flex-item4{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.ke4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66.66%;
+    background-color: rgb(47, 206, 255);  
+}
+
+.ke5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33.33%;
+    background-color: rgb(78, 47, 255);  
+}
+
+.flex-item5{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.ke6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33.33%;
+    background-color: rgb(255, 47, 47);  
+}
+
+.ke7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66.66%;
+    background-color: rgb(220, 47, 255);  
+}
+
+.flex-area2{
+    display: flex;
+    height: 200px;
+    width: 400px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex-item6{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    gap: 10px;
+}
+
+.ke8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66.66%;
+    background-color: rgb(255, 47, 161); 
+}
+
+.ke9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    background-color: rgb(255, 47, 92); 
+}
+
+.ke10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-color: rgb(255, 234, 47); 
+}
+
+img{
+    height: 20px;
+    width: 20px;
+}

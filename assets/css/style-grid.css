@@ -1,0 +1,120 @@
+:root{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+section{
+    background-color: var(--secondary-color);
+    width: 600px;
+    height: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.grid-area{
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    grid-gap: 15px;
+    padding: 10px;
+}
+
+.grid-item{
+    background-color: aqua;
+    width: auto;
+    height: auto;
+    display: grid;
+    place-items: center;
+}
+
+.box1{
+    background-color: rgba(0, 128, 0, 0.658);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 18;
+}
+
+.box2{
+    background-color: rgba(0, 195, 255, 0.623);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+
+.box3{
+    background-color: rgba(255, 187, 0, 0.801);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 9;
+    grid-row-end: 26;
+}
+
+.box4{
+    background-color: #815B5B;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 18;
+}
+
+.box5{
+    background-color: orangered;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 18;
+    grid-row-end: 35;
+}
+
+.box6{
+    background-color: red;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 26;
+    grid-row-end: 35;
+}
+
+.box7{
+    background-color: blue;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 18;
+    grid-row-end: 35;
+}
+
+.box8{
+    background-color: #EA047E;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 35;
+    grid-row-end: 44;
+}
+
+.box9{
+    background-color: purple;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 35;
+    grid-row-end: 44;
+}
+
+.box10{
+    background-color: rgba(0, 195, 255, 0.623);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 44;
+    grid-row-end: 53;
+}
+
+.grid-item img{
+    height: 20px;
+    width: 20px;
+}
