@@ -1,0 +1,8 @@
+body{
+    margin: 50px;
+    background-color: aqua;
+}
+.container{
+    border: 1px solid black;
+    border-width: 10px;
+}
