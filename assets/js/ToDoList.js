@@ -1,40 +1,52 @@
-const form = document.querySelector('#todo-form');
-const input = document.querySelector('#todo-input');
-const todoList = document.querySelector('#todo-list');
-const clearBtn = document.querySelector('#clear-btn');
+const form = document.querySelector("#todo-form");
+const input = document.querySelector("#todo-input");
+const todoList = document.querySelector("#todo-list");
+const clearBtn = document.querySelector("#clear-btn");
 
-// get todos from localStorage
-let todos = JSON.parse(localStorage.getItem('todos')) || [];
+// get todos from API
+let todos = [];
+
+function getTodos() {
+  fetch("https://crudcrud.com/api/3cbb6d3953274443bf8f76745d44723f/ToDoList")
+    .then((response) => response.json())
+    .then((data) => {
+      todos = data;
+      renderTodos();
+    });
+}
 
 // render todos
 function renderTodos() {
-  todoList.innerHTML = '';
+  todoList.innerHTML = "";
   todos.forEach((todo, index) => {
-    const li = document.createElement('li');
-    li.className = 'list-group-item';
+    const li = document.createElement("li");
+    li.className = "list-group-item";
     li.innerHTML = `
-      <input type="checkbox" class="checkbox mr-2" ${todo.completed ? 'checked' : ''}>
-      <span class="${todo.completed ? 'completed' : ''}">${todo.text}</span>
-      <button type="button" class="close ml-2" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    `;
-    const checkbox = li.querySelector('.checkbox');
-    checkbox.addEventListener('change', () => {
+            <input type="checkbox" class="checkbox mr-2" ${
+              todo.completed ? "checked" : ""
+            }>
+            <span class="${todo.completed ? "completed" : ""}">${
+      todo.text
+    }</span>
+            <button type="button" class="close ml-2" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          `;
+    const checkbox = li.querySelector(".checkbox");
+    checkbox.addEventListener("change", () => {
       todo.completed = checkbox.checked;
-      saveTodos();
+      updateTodo(todo._id, todo);
       renderTodos();
     });
-    const span = li.querySelector('span');
-    span.addEventListener('click', () => {
+    const span = li.querySelector("span");
+    span.addEventListener("click", () => {
       todo.completed = !todo.completed;
-      saveTodos();
+      updateTodo(todo._id, todo);
       renderTodos();
     });
-    const closeButton = li.querySelector('.close');
-    closeButton.addEventListener('click', () => {
-      todos.splice(index, 1);
-      saveTodos();
+    const closeButton = li.querySelector(".close");
+    closeButton.addEventListener("click", () => {
+      deleteTodo(todo._id);
       renderTodos();
     });
     todoList.appendChild(li);
@@ -42,32 +54,32 @@ function renderTodos() {
 }
 
 // add todo
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const text = input.value.trim();
-  if (text !== '') {
+  if (text !== "") {
     const todo = {
       text,
-      completed: false
+      completed: false,
     };
-    todos.push(todo);
-    saveTodos();
-    input.value = '';
-    renderTodos();
+    createTodo(todo);
+    input.value = "";
   }
 });
 
 // clear todos
-clearBtn.addEventListener('click', () => {
-  todos = [];
-  saveTodos();
+clearBtn.addEventListener("click", () => {
+  clearTodos();
   renderTodos();
 });
 
-// save todos to localStorage
-function saveTodos() {
-  localStorage.setItem('todos', JSON.stringify(todos));
+// create todo
+function createTodo(todo) {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(todos),
+  };
 }
-
-// initial render
-renderTodos();
