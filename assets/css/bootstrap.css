@@ -1,0 +1,85 @@
+:root{
+      --bg: rgba(205, 240, 240, 0.521);
+}
+.blogku{
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+}
+.blogku .blogku-text {
+  padding-left: 360px;
+  font-size: 2.4em;
+}
+.blogku .blogku-item {
+  padding-left: 360px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .navbar-brand {
+    margin-bottom: 15px;
+    padding-left: 15px;
+  }
+  .navbar-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .blogku{
+    display: none;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-flex1 {
+    font-size: 20px;
+  }
+  .flex-item1 {
+    font-size: 15px;
+  }
+  .container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    margin: 0.5em;
+    margin-left: 20px;
+    padding: 0.1em;
+    width: 160px;
+  }
+  .card-image-top {
+    width: auto;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: -40px;
+  }
+  .card-title {
+    font-size: 15px;
+  }
+  .card-text {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-artikel2 {
+    margin-left: none;
+  }
+  ul li {
+    font-size: 13px;
+  }
+}
